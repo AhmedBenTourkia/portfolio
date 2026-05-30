@@ -341,13 +341,12 @@
         align-items: center;
         justify-content: center;
       }
-      .avatar-initials {
-        font-family: "Fraunces", serif;
-        font-size: 88px;
-        font-weight: 300;
-        color: var(--accent);
-        font-style: italic;
-        font-variation-settings: "opsz" 144;
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
       }
       .avatar::after {
         content: "";
@@ -888,7 +887,7 @@
 
           <aside class="id-card">
             <div class="avatar">
-              <div class="avatar-initials">A.B</div>
+              <img src="headshot.png" alt="Ahmed Ben Tourkia" />
             </div>
             <div class="id-row">
               <span class="key" data-i18n="card.name">name</span

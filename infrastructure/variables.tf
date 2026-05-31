@@ -10,5 +10,5 @@ variable "domain_name" {
 
 variable "bucket_name" {
   description = "S3 bucket name for the portfolio"
-  default     = "portofolio-turkia"
+  default     = "portofolio-turkia-bucket"
 }

@@ -494,21 +494,14 @@
         grid-template-columns: 200px 1fr 280px;
         gap: 48px;
         align-items: start;
-        transition: padding 0.3s ease;
       }
       .project:last-child {
         border-bottom: 1px solid var(--border);
-      }
-      .project:hover {
-        padding-left: 16px;
       }
       @media (max-width: 900px) {
         .project {
           grid-template-columns: 1fr;
           gap: 24px;
-        }
-        .project:hover {
-          padding-left: 0;
         }
       }
       .project-num {
@@ -519,6 +512,10 @@
         color: var(--text-faint);
         line-height: 1;
         font-variation-settings: "opsz" 144;
+        transition: color 0.25s ease;
+      }
+      .project:hover .project-num {
+        color: var(--accent);
       }
       .project-date {
         font-family: "JetBrains Mono", monospace;
@@ -820,6 +817,31 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      /* ===== Mobile fixes ===== */
+      @media (max-width: 640px) {
+        .container {
+          padding: 0 16px;
+        }
+        .nav-inner {
+          padding: 0 16px;
+        }
+        .hero {
+          padding: 100px 0 60px;
+        }
+        .hero-bio {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-actions {
+          flex-direction: column;
+        }
+        .hero-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -863,14 +885,16 @@
               <span data-i18n="hero.meta3">Available for internships</span>
             </div>
             <h1 data-i18n-html="hero.title">
-              Building <span class="accent">pipelines</span><br />
-              that turn raw <span class="underline">data</span><br />
-              into decisions.
+              I build things,<br />
+              move <span class="accent">data</span>,<br />
+              and keep <span class="underline">learning</span>.
             </h1>
             <p class="hero-bio" data-i18n="hero.bio">
-              I'm Ahmed, a Computer Science student focused on Data Engineering. I design ETL
-              pipelines, build data warehouses, and ship full-stack applications. Currently seeking
-              an internship in Germany to work on real-world data problems.
+              I'm Ahmed, a CS student in Ostfalia with a focus on data engineering. I've built
+              ETL pipelines and data warehouses, but also full-stack apps, analytics dashboards, and
+              whatever else the problem called for. I pick things up quickly and tend to get curious
+              about everything adjacent to what I'm working on. Looking for an internship in Germany
+              where the work is real.
             </p>
             <div class="hero-actions">
               <a
@@ -1226,9 +1250,9 @@
           "hero.meta2": "Data Engineering",
           "hero.meta3": "Available for internships",
           "hero.title":
-            'Building <span class="accent">pipelines</span><br>that turn raw <span class="underline">data</span><br>into decisions.',
+            'I build things,<br>move <span class="accent">data</span>,<br>and keep <span class="underline">learning</span>.',
           "hero.bio":
-            "I'm Ahmed, a Computer Science student focused on Data Engineering. I design ETL pipelines, build data warehouses, and ship full-stack applications. Currently seeking an internship in Germany to work on real-world data problems.",
+            "I'm Ahmed, a Computer Science student with a focus on data engineering. I've built ETL pipelines and data warehouses, but also full-stack apps, analytics dashboards, and whatever else the problem called for. I pick things up quickly and tend to get curious about everything adjacent to what I'm working on. Looking for an internship in Germany where the work is real.",
           "hero.cta1": "Download Resume",
           "hero.cta2": "View projects",
 
@@ -1328,9 +1352,9 @@
           "hero.meta2": "Data Engineering",
           "hero.meta3": "Verfügbar für Praktikum",
           "hero.title":
-            '<span class="accent">Pipelines</span> bauen,<br>die Rohdaten in<br><span class="underline">Entscheidungen</span> verwandeln.',
+            'Ich baue Dinge,<br>bewege <span class="accent">Daten</span>,<br>und lerne <span class="underline">nie aus</span>.',
           "hero.bio":
-            "Ich bin Ahmed, Informatikstudent mit Schwerpunkt Data Engineering. Ich entwerfe ETL-Pipelines, baue Data Warehouses und entwickle Full-Stack-Anwendungen. Derzeit auf der Suche nach einem Praktikum in Deutschland, um an realen Datenprojekten mitzuarbeiten.",
+            "Ich bin Ahmed, Informatikstudent aus Braunschweig mit Schwerpunkt Data Engineering. Ich habe ETL-Pipelines und Data Warehouses entwickelt, aber auch Full-Stack-Apps, Dashboards und alles, was das Projekt verlangt hat. Ich lerne schnell und werde neugierig auf alles, was mit meinem Arbeitsfeld zusammenhängt. Derzeit suche ich ein Praktikum in Deutschland, wo die Aufgaben real sind.",
           "hero.cta1": "Lebenslauf herunterladen",
           "hero.cta2": "Projekte ansehen",
 

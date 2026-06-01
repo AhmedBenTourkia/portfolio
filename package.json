@@ -9,7 +9,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "frontend/**/*.html": ["prettier --write", "htmlhint"]
+    "**/*.html": ["prettier --write", "htmlhint"]
   },
   "devDependencies": {
     "htmlhint": "^1.1.4",

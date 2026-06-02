@@ -1023,35 +1023,41 @@
         <article class="project">
           <div>
             <div class="project-num">01</div>
-            <div class="project-date">Sep 2025 — Jan 2026</div>
+            <div class="project-date">2026 — Live</div>
           </div>
           <div class="project-body">
-            <h3 data-i18n-html="projects.p1.title">
-              Bikeshop Data Warehouse <span class="badge">DATA ENG</span>
-            </h3>
-            <p class="project-desc" data-i18n="projects.p1.desc">
-              A multi-layer data warehouse integrating two operational systems into a single
-              analytical model. Designed for incremental loads, historical tracking, and clean
-              dimensional reporting.
+            <h3>NYC Yellow Taxi Data Pipeline <span class="badge">DATA ENG</span></h3>
+            <p class="project-desc">
+              A production-grade medallion pipeline on Databricks that ingests, cleanses, enriches,
+              and aggregates large-scale NYC taxi trip data — paired with an interactive site that
+              visualizes the live job DAG and runs the pipeline on an uploaded CSV.
             </p>
             <ul class="project-bullets">
-              <li data-i18n="projects.p1.b1">
-                Designed Staging, Integrated, and Star Schema layers from two source systems.
+              <li>
+                Medallion architecture: Landing → Bronze → Silver → Gold → Export on Delta Lake.
               </li>
-              <li data-i18n="projects.p1.b2">
-                Built incremental ETL models in dbt with dimensional fact tables.
+              <li>Automated Databricks job with conditional gates and SCD Type 2 zone lookups.</li>
+              <li>
+                React front end on AWS S3 + CloudFront, deployed via Terraform + GitHub Actions
+                (OIDC).
               </li>
-              <li data-i18n="projects.p1.b3">
-                Implemented SCD Type 2 for product history and consolidated customer data.
-              </li>
-              <li data-i18n="projects.p1.b4">Branch-based Git workflow for safe iteration.</li>
+              <li>Live animated pipeline visualization and an interactive CSV-upload demo.</li>
             </ul>
+            <a
+              class="btn btn-ghost"
+              href="https://nyctaxi.ahmedbentourkia.click"
+              target="_blank"
+              rel="noopener"
+            >
+              View live site →
+            </a>
           </div>
           <aside class="project-stack">
-            <div class="project-stack-label" data-i18n="projects.stack">Stack</div>
+            <div class="project-stack-label">Stack</div>
             <div class="project-stack-tags">
-              <span class="stack-tag">PostgreSQL</span><span class="stack-tag">dbt</span>
-              <span class="stack-tag">SQL</span><span class="stack-tag">Git</span>
+              <span class="stack-tag">Databricks</span><span class="stack-tag">PySpark</span>
+              <span class="stack-tag">Delta Lake</span><span class="stack-tag">AWS</span>
+              <span class="stack-tag">Terraform</span><span class="stack-tag">React</span>
             </div>
           </aside>
         </article>
